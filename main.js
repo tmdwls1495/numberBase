@@ -30,13 +30,16 @@ function delete1(){
     exam.innerHTML = ` `
 }
 function pickRandomNum(){
-    for(i=0;i<3;i++){
-    computerNum = Math.floor(Math.random() * 10);
-    answer += computerNum;
-    arrAnswer = answer.split("");
+    let rdN = [1,2,3,4,5,6,7,8,9]
+         for(let i=0;i<3;i++){
+            let rdNumber = Math.floor(Math.random() * rdN.length);  
+            computerNum = rdN[rdNumber]; 
+             answer += computerNum;
+             arrAnswer = answer.split("");
+             rdN.splice(rdNumber, 1);
+         }
+ 
 }
-}
-
 
 function play(){
     base += 1
@@ -92,3 +95,4 @@ function reset() {
 }
 
 pickRandomNum();
+console.log(answer)
