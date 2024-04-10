@@ -30,6 +30,7 @@ function delete1(){
     exam.innerHTML = ` `
 }
 function pickRandomNum(){
+ 
     let rdN = [1,2,3,4,5,6,7,8,9]
          for(let i=0;i<3;i++){
             let rdNumber = Math.floor(Math.random() * rdN.length);  
@@ -42,6 +43,7 @@ function pickRandomNum(){
 }
 
 function play(){
+    
     s = 0, b = 0;
     base += 1
     chanceArea.textContent = `${base}회차`
@@ -87,12 +89,16 @@ function play(){
 
 function reset() {
     userInput.value = ""
+    answer = ""
     pickRandomNum();
     chances = 10;
     history.length = 0;
     hint.innerHTML = `<br\>`;
     base = 0;
+    
     resultArea.textContent = "게임을 초기화합니다!"
+    console.log(answer)
+    
 }
 
 pickRandomNum();
