@@ -43,7 +43,6 @@ function pickRandomNum(){
 }
 
 function play(){
-    
     s = 0, b = 0;
     base += 1
     chanceArea.textContent = `${base}회차`
@@ -81,21 +80,18 @@ function play(){
     if(chances < 1) {
         gameOver = true;
     }
-    if(gameOver == true ){
-        playButton.disabled = true;
-    }
 }
 
 
 function reset() {
-    userInput.value = ""
-    answer = ""
+    gameOver = false;
+    userInput.value = "";
+    answer = "";
     pickRandomNum();
     chances = 10;
     history.length = 0;
     hint.innerHTML = `<br\>`;
     base = 0;
-    
     resultArea.textContent = "게임을 초기화합니다!"
     console.log(answer)
     
