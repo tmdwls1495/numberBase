@@ -42,6 +42,7 @@ function pickRandomNum(){
 }
 
 function play(){
+    s = 0, b = 0;
     base += 1
     chanceArea.textContent = `${base}회차`
     let userValue = userInput.value;
